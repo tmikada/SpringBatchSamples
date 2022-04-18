@@ -51,13 +51,14 @@
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>prepare-package</phase>
+						<phase>package</phase>
 						<goals>
-							<goal>unpack-dependencies</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-							<includeArtifactIds>spring-core</includeArtifactIds>
+							<!--  includeArtifactIds>spring-core</includeArtifactIds -->
+							<excludeArtifactIds>lombok</excludeArtifactIds>
 						</configuration>
 					</execution>
 				</executions>
