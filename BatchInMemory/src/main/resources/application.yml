@@ -1,0 +1,17 @@
+spring:
+  batch:
+#    job:
+#      names: CsvImportJdbcJob
+    jdbc:
+      initialize-schema: never
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/batch2
+    username: spring
+    password: password
+
+logging:
+  level:
+     '[]org.springframework]': debug
+     '[com.example.demo]': debug
+    
