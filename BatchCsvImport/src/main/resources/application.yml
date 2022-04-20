@@ -4,11 +4,11 @@ spring:
 #      names: CsvImportJdbcJob
       names: CsvImportSkipJob
     jdbc:
-      initialize-schema: always
-      schema: classpath:org/springframework/batch/core/schema-postgresql.sql
+      initialize-schema: never
+#      schema: classpath:org/springframework/batch/core/schema-postgresql.sql
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/batch
+    url: jdbc:postgresql://localhost:5432/batch2
     username: spring
     password: password
 
