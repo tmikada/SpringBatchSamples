@@ -1,0 +1,23 @@
+spring:
+  batch:
+    job:
+      names: CsvImportToAuroraSkipJob
+    jdbc:
+      initialize-schema: never
+#      schema: classpath:org/springframework/batch/core/schema-postgresql.sql
+  datasource:
+#    local: 
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/batch
+      username: spring
+      password: password
+#    local2: 
+#      driver-class-name: org.postgresql.Driver
+#      url: jdbc:postgresql://localhost:5432/batch2
+#      username: spring
+#      password: password
+
+logging:
+  level:
+    '[com.example.demo]': debug
+    
